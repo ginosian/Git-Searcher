@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>git-searcher</groupId>
+    <artifactId>git-searcher</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <springframework.boot.version>1.5.2.RELEASE</springframework.boot.version>
+        <hibernate.version>5.2.2.Final</hibernate.version>
+        <postgresql.version>9.0-801.jdbc4</postgresql.version>
+        <com.zaxxer.version>2.4.5</com.zaxxer.version>
+        <apache.commons>3.7</apache.commons>
+        <glassfish.jersey>2.25.1</glassfish.jersey>
+    </properties>
+
+    <dependencies>
+
+        <!-- region SPRING BOOT -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>${springframework.boot.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${springframework.boot.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>${springframework.boot.version}</version>
+        </dependency>
+        <!-- endregion -->
+
+        <!--region JERSEY-->
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>${glassfish.jersey}</version>
+        </dependency>
+
+        <dependency>
+        <groupId>org.glassfish.jersey.media</groupId>
+        <artifactId>jersey-media-json-jackson</artifactId>
+        <version>${glassfish.jersey}</version>
+        </dependency>
+        <!-- endregion -->
+
+        <!-- region HIBERNATE -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-java8</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+        <!-- endregion -->
+
+        <!-- region DATASOURCE -->
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>${com.zaxxer.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgresql.version}</version>
+        </dependency>
+        <!-- endregion -->
+
+        <!-- region MISC -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${apache.commons}</version>
+        </dependency>
+        <!-- endregion -->
+
+    </dependencies>
+
+
+</project>
