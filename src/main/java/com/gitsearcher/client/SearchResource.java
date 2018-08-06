@@ -1,9 +1,11 @@
 package com.gitsearcher.client;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gitsearcher.client.api.AbstractApiResource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.ws.rs.client.Client;
 import javax.ws.rs.client.WebTarget;
 
 /**
@@ -13,9 +15,12 @@ import javax.ws.rs.client.WebTarget;
  */
 public class SearchResource extends AbstractApiResource {
 
-    private final Logger logger = LoggerFactory.getLogger(InfoResource.class);
+    private final Logger logger = LoggerFactory.getLogger(SearchResource.class);
 
-    public SearchResource(final WebTarget webTarget) {
-        super("api", webTarget);
+    private ObjectMapper objectMapper;
+
+    public SearchResource(Client client, WebTarget rootTarget, ObjectMapper objectMapper) {
+        super(client, rootTarget, "/search");
+        this.objectMapper = objectMapper;
     }
 }
