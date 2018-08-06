@@ -4,10 +4,7 @@ import com.gitsearcher.git.GitClient;
 import com.gitsearcher.rest.endpoint.dto.RepositoryAnalyticsDto;
 import com.gitsearcher.service.GitService;
 import com.google.common.collect.Lists;
-import org.eclipse.egit.github.core.Contributor;
-import org.eclipse.egit.github.core.Repository;
-import org.eclipse.egit.github.core.RepositoryCommit;
-import org.eclipse.egit.github.core.SearchRepository;
+import org.eclipse.egit.github.core.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -40,7 +37,7 @@ public class GitServiceImpl implements GitService{
     public RepositoryAnalyticsDto analytics(String repositoryGeneratedId) {
         final Repository repository = gitClient.getRepository(repositoryGeneratedId);
         final List<Contributor> contributors = gitClient.getContributors(repositoryGeneratedId);
-        final Map<Integer, List<RepositoryCommit>> commits = recalculateData(searchRepositoryCommits(repositoryGeneratedId));
+        final Map<User, List<RepositoryCommit>> commits = recalculateData(searchRepositoryCommits(repositoryGeneratedId));
         final RepositoryAnalyticsDto repositoryAnalyticsDto = new RepositoryAnalyticsDto();
         repositoryAnalyticsDto.setRepository(repository);
         repositoryAnalyticsDto.setContributors(contributors);
@@ -72,13 +69,13 @@ public class GitServiceImpl implements GitService{
         return null;
     }
 
-    private Map<Integer, List<RepositoryCommit>> recalculateData(List<RepositoryCommit> repositoryCommits){
-        final Map<Integer, List<RepositoryCommit>> userCommitsMap= new HashMap<>();
+    private Map<User, List<RepositoryCommit>> recalculateData(List<RepositoryCommit> repositoryCommits){
+        final Map<User, List<RepositoryCommit>> userCommitsMap= new HashMap<>();
         repositoryCommits.forEach(repositoryCommit -> {
-            final Integer authorId = repositoryCommit.getCommitter().getId();
-            final List<RepositoryCommit> value = userCommitsMap.get(authorId);
+            final User commiter = repositoryCommit.getCommitter();
+            final List<RepositoryCommit> value = userCommitsMap.get(commiter);
             if(value == null){
-                userCommitsMap.put(authorId, Lists.newArrayList(repositoryCommit));
+                userCommitsMap.put(commiter, Lists.newArrayList(repositoryCommit));
             } else {
                 value.add(repositoryCommit);
             }

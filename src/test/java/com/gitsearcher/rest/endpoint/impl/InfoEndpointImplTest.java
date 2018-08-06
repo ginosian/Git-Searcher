@@ -1,4 +1,4 @@
-package com.gitsearcher.service.impl;
+package com.gitsearcher.rest.endpoint.impl;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,11 +9,12 @@ import org.mockito.runners.MockitoJUnitRunner;
  * Date: gitsearcher<br/>
  * Date: 8/6/18<br/>
  */
+
 @RunWith(MockitoJUnitRunner.class)
-public class AnalyticsServiceImpTest {
+public class InfoEndpointImplTest {
 
     @Test
-    void calculateStats() {
+    public void info() throws Exception {
     }
 
 }

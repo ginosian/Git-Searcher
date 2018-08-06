@@ -3,6 +3,7 @@ package com.gitsearcher.rest.endpoint.dto;
 import org.eclipse.egit.github.core.Contributor;
 import org.eclipse.egit.github.core.Repository;
 import org.eclipse.egit.github.core.RepositoryCommit;
+import org.eclipse.egit.github.core.User;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -17,7 +18,7 @@ public class RepositoryAnalyticsDto {
 
     private Repository repository;
     private List<Contributor> contributors;
-    private Map<Integer, List<RepositoryCommit>> commits;
+    private Map<User, List<RepositoryCommit>> commits;
     private LocalDateTime created;
 
     public Repository getRepository() {
@@ -36,11 +37,11 @@ public class RepositoryAnalyticsDto {
         this.contributors = contributors;
     }
 
-    public Map<Integer, List<RepositoryCommit>> getCommits() {
+    public Map<User, List<RepositoryCommit>> getCommits() {
         return commits;
     }
 
-    public void setCommits(Map<Integer, List<RepositoryCommit>> commits) {
+    public void setCommits(Map<User, List<RepositoryCommit>> commits) {
         this.commits = commits;
     }
 
