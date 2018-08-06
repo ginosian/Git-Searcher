@@ -1,8 +1,11 @@
 package com.gitsearcher.service.impl;
 
 import com.gitsearcher.git.GitClient;
+import com.gitsearcher.rest.endpoint.dto.RepositoryAnalyticsDto;
 import com.gitsearcher.service.GitService;
 import com.google.common.collect.Lists;
+import org.eclipse.egit.github.core.Contributor;
+import org.eclipse.egit.github.core.Repository;
 import org.eclipse.egit.github.core.RepositoryCommit;
 import org.eclipse.egit.github.core.SearchRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +34,18 @@ public class GitServiceImpl implements GitService{
     public List<SearchRepository> searchRepositories(String query) {
         final List<SearchRepository> repositories = gitClient.searchRepositories(query);
         return repositories;
+    }
+
+    @Override
+    public RepositoryAnalyticsDto analytics(String repositoryGeneratedId) {
+        final Repository repository = gitClient.getRepository(repositoryGeneratedId);
+        final List<Contributor> contributors = gitClient.getContributors(repositoryGeneratedId);
+        final Map<Integer, List<RepositoryCommit>> commits = recalculateData(searchRepositoryCommits(repositoryGeneratedId));
+        final RepositoryAnalyticsDto repositoryAnalyticsDto = new RepositoryAnalyticsDto();
+        repositoryAnalyticsDto.setRepository(repository);
+        repositoryAnalyticsDto.setContributors(contributors);
+        repositoryAnalyticsDto.setCommits(commits);
+        return repositoryAnalyticsDto;
     }
 
     private List<RepositoryCommit> searchRepositoryCommits(final String repositoryGeneratedId){

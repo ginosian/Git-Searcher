@@ -1,9 +1,6 @@
 package com.gitsearcher.git;
 
-import org.eclipse.egit.github.core.Repository;
-import org.eclipse.egit.github.core.RepositoryCommit;
-import org.eclipse.egit.github.core.RepositoryId;
-import org.eclipse.egit.github.core.SearchRepository;
+import org.eclipse.egit.github.core.*;
 import org.eclipse.egit.github.core.client.GitHubClient;
 import org.eclipse.egit.github.core.service.CommitService;
 import org.eclipse.egit.github.core.service.RepositoryService;
@@ -50,14 +47,15 @@ public class GitClient {
         return null;
     }
 
-    public void getContributers(final String repositoryGeneratedId){
+    public List<Contributor> getContributors(final String repositoryGeneratedId){
         notEmpty(repositoryGeneratedId, "repositoryGeneratedId can not be empty");
         final RepositoryService repositoryService = new RepositoryService(gitOAuthProvider.getGitHubClient());
         try {
-            repositoryService.getContributors(RepositoryId.createFromId(repositoryGeneratedId), false);
+            return repositoryService.getContributors(RepositoryId.createFromId(repositoryGeneratedId), false);
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return null;
     }
 
 

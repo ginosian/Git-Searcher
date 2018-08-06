@@ -2,7 +2,7 @@ package com.gitsearcher.rest.config;
 
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 import com.gitsearcher.rest.endpoint.impl.InfoEndpointImpl;
-import com.gitsearcher.rest.endpoint.impl.SearchEndpointImpl;
+import com.gitsearcher.rest.endpoint.impl.RepositoryEndpointImpl;
 import io.swagger.jaxrs.config.BeanConfig;
 import io.swagger.jaxrs.listing.ApiListingResource;
 import org.glassfish.jersey.media.multipart.MultiPartFeature;
@@ -43,7 +43,7 @@ public class JerseyConfig extends ResourceConfig{
         EncodingFilter.enableFor(this, new Class[]{GZipEncoder.class});
         // Endpoints
         register(InfoEndpointImpl.class);
-        register(SearchEndpointImpl.class);
+        register(RepositoryEndpointImpl.class);
     }
 
     private void configSwagger(){

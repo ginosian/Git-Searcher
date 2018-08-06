@@ -1,5 +1,6 @@
 package com.gitsearcher.service;
 
+import com.gitsearcher.rest.endpoint.dto.RepositoryAnalyticsDto;
 import org.eclipse.egit.github.core.SearchRepository;
 
 import java.util.List;
@@ -12,4 +13,6 @@ import java.util.List;
 public interface GitService {
 
     List<SearchRepository> searchRepositories(String query);
+
+    RepositoryAnalyticsDto analytics(String repositoryGeneratedId);
 }
