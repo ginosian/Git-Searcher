@@ -1,15 +1,13 @@
-package com.gitsearcher.endpoint.endpoint;
+package com.gitsearcher.rest.endpoint;
 
-import com.gitsearcher.endpoint.endpoint.dto.InfoDto;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.SwaggerDefinition;
 import io.swagger.annotations.Tag;
+import org.eclipse.egit.github.core.SearchRepository;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import java.util.List;
 
 /**
  * @author Marta Ginosyan<br/>
@@ -19,12 +17,15 @@ import javax.ws.rs.core.MediaType;
 
 @SwaggerDefinition(tags = {@Tag(name = "Info", description = "Application info")})
 @Api(tags = {"Info"})
-@Path("/info")
+@Path("/search")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public interface InfoEndpoint {
+public interface SearchEndpoint {
 
     @GET
-    @Path("")
-    InfoDto info();
+    @Path("/repositories")
+    List<SearchRepository> searchRepositories(
+            @QueryParam("query") final String query,
+            @DefaultValue("0") @QueryParam("page") final Integer page
+    );
 }

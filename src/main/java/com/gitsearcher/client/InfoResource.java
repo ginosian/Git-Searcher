@@ -2,7 +2,7 @@ package com.gitsearcher.client;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gitsearcher.client.api.AbstractApiResource;
-import com.gitsearcher.endpoint.endpoint.dto.InfoDto;
+import com.gitsearcher.rest.endpoint.dto.InfoDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -1,7 +1,7 @@
-package com.gitsearcher.endpoint.endpoint.impl;
+package com.gitsearcher.rest.endpoint.impl;
 
-import com.gitsearcher.endpoint.endpoint.SearchEndpoint;
-import com.gitsearcher.git.service.GitService;
+import com.gitsearcher.rest.endpoint.SearchEndpoint;
+import com.gitsearcher.service.GitService;
 import org.eclipse.egit.github.core.SearchRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -20,6 +20,6 @@ public class SearchEndpointImpl implements SearchEndpoint{
 
     @Override
     public List<SearchRepository> searchRepositories(final String query, final Integer page) {
-        return gitService.searchRepository(query);
+        return gitService.searchRepositories(query);
     }
 }

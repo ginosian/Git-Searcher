@@ -1,4 +1,4 @@
-package com.gitsearcher.endpoint.endpoint.dto;
+package com.gitsearcher.rest.endpoint.dto;
 
 /**
  * @author Marta Ginosyan<br/>

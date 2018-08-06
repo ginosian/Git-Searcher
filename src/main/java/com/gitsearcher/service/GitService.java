@@ -1,4 +1,4 @@
-package com.gitsearcher.git.service;
+package com.gitsearcher.service;
 
 import org.eclipse.egit.github.core.SearchRepository;
 
@@ -11,5 +11,5 @@ import java.util.List;
  */
 public interface GitService {
 
-    List<SearchRepository> searchRepository(String query);
+    List<SearchRepository> searchRepositories(String query);
 }

@@ -1,7 +1,7 @@
-package com.gitsearcher.endpoint.endpoint.impl;
+package com.gitsearcher.rest.endpoint.impl;
 
-import com.gitsearcher.endpoint.endpoint.InfoEndpoint;
-import com.gitsearcher.endpoint.endpoint.dto.InfoDto;
+import com.gitsearcher.rest.endpoint.InfoEndpoint;
+import com.gitsearcher.rest.endpoint.dto.InfoDto;
 
 /**
  * @author Marta Ginosyan<br/>
