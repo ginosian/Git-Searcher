@@ -2,23 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87d10964-f414-4882-a1a9-69e353884de2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/Component/DtoConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/dto/ContributorDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/dto/RepositoryCommitDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/dto/RepositoryDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/gitsearcher/service/component/GitModelConverter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gitsearcher/entity/Contributor.java" afterPath="$PROJECT_DIR$/src/main/java/com/gitsearcher/entity/Contributor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gitsearcher/entity/ContributorStat.java" afterPath="$PROJECT_DIR$/src/main/java/com/gitsearcher/entity/ContributorStat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gitsearcher/entity/Repository.java" afterPath="$PROJECT_DIR$/src/main/java/com/gitsearcher/entity/Repository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gitsearcher/entity/RepositoryCommit.java" afterPath="$PROJECT_DIR$/src/main/java/com/gitsearcher/entity/RepositoryCommit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gitsearcher/entity/SearchResult.java" afterPath="$PROJECT_DIR$/src/main/java/com/gitsearcher/entity/SearchResult.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gitsearcher/misc/ContributionHonor.java" afterPath="$PROJECT_DIR$/src/main/java/com/gitsearcher/misc/ContributionHonor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/dto/RepositoryAnalyticsDto.java" afterPath="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/dto/RepositoryAnalyticsDto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/Component/DtoConverter.java" afterPath="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/Component/DtoConverter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/RepositoryEndpoint.java" afterPath="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/RepositoryEndpoint.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/dto/RepositoryDto.java" afterPath="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/dto/RepositoryDto.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/impl/RepositoryEndpointImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/impl/RepositoryEndpointImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gitsearcher/service/AnalyticsService.java" afterPath="$PROJECT_DIR$/src/main/java/com/gitsearcher/service/AnalyticsService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gitsearcher/service/GitService.java" afterPath="$PROJECT_DIR$/src/main/java/com/gitsearcher/service/GitService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gitsearcher/service/impl/AnalyticsServiceImp.java" afterPath="$PROJECT_DIR$/src/main/java/com/gitsearcher/service/impl/AnalyticsServiceImp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gitsearcher/service/impl/GitServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/gitsearcher/service/impl/GitServiceImpl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -32,11 +21,74 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="GitService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/service/GitService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DtoConverter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/Component/DtoConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+            <state relative-caret-position="372">
+              <caret line="42" column="39" lean-forward="false" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RepositoryDto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/dto/RepositoryDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-585">
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="e#347#348#0" expanded="true" />
+                <element signature="e#384#385#0" expanded="true" />
+                <element signature="e#444#445#0" expanded="true" />
+                <element signature="e#496#497#0" expanded="true" />
+                <element signature="e#534#535#0" expanded="true" />
+                <element signature="e#568#569#0" expanded="true" />
+                <element signature="e#622#623#0" expanded="true" />
+                <element signature="e#668#669#0" expanded="true" />
+                <element signature="e#699#700#0" expanded="true" />
+                <element signature="e#726#727#0" expanded="true" />
+                <element signature="e#766#767#0" expanded="true" />
+                <element signature="e#798#799#0" expanded="true" />
+                <element signature="e#836#837#0" expanded="true" />
+                <element signature="e#870#871#0" expanded="true" />
+                <element signature="e#924#925#0" expanded="true" />
+                <element signature="e#970#971#0" expanded="true" />
+                <element signature="e#1000#1001#0" expanded="true" />
+                <element signature="e#1026#1027#0" expanded="true" />
+                <element signature="e#1064#1065#0" expanded="true" />
+                <element signature="e#1094#1095#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InfoEndpoint.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/InfoEndpoint.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GitServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/service/impl/GitServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-258">
+              <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,14 +120,68 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RepositoryEndpointImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RepositoryEndpointImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/impl/RepositoryEndpointImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="-18">
+              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchResource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/client/SearchResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InfoResource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/client/InfoResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GitModelConverter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/service/component/GitModelConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="83" column="5" lean-forward="false" selection-start-line="81" selection-start-column="4" selection-end-line="83" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GitClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/git/GitClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-384">
+              <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RepositoryEndpoint.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/RepositoryEndpoint.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -119,8 +225,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/client/config/SwaggerConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/client/api/impl/ApiClientImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/client/endpoint/InfoEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/client/InfoResource.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/index.html" />
@@ -136,9 +240,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/endpoint/config/JerseyConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/impl/SearchEndpointImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/config/JerseyConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/git/GitClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/AnalyticsEndpoint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/RepositoryEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/entity/ContributionStat.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/entity/AbstractEntity.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
@@ -150,7 +252,6 @@
         <option value="$PROJECT_DIR$/src/test/java/com/gitsearcher/git/service/impl/GitServiceImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/dto/ContributorDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/dto/RepositoryCommitDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/dto/RepositoryDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/service/component/GitModelsConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/service/component/Converter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/git/GitModelsConverter.java" />
@@ -161,14 +262,19 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/entity/Contributor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/dto/RepositoryAnalyticsDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/service/component/GitModelConverter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/service/GitService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/service/AnalyticsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/service/impl/GitServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/entity/ContributorStat.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/entity/SearchResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/misc/ContributionHonor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/Component/DtoConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/service/impl/AnalyticsServiceImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/dto/RepositoryDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/Component/DtoConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/dto/RepositoryIdDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/service/GitService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/git/GitClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/exception/ApiRateLimitExceededException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/service/impl/GitServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/RepositoryEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/impl/RepositoryEndpointImpl.java" />
       </list>
     </option>
@@ -200,7 +306,7 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Changed Files" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -352,7 +458,7 @@
               <item name="gitsearcher" type="462c0819:PsiDirectoryNode" />
               <item name="rest" type="462c0819:PsiDirectoryNode" />
               <item name="endpoint" type="462c0819:PsiDirectoryNode" />
-              <item name="Component" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gitsearcher" type="b2602c69:ProjectViewProjectNode" />
@@ -473,81 +579,64 @@
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="git_searcher" type="cbb8eebc:String" user="git_searcher" />
-              <item name="src/main" type="cbb8eebc:String" user="src/main" />
+              <item name=".idea" type="cbb8eebc:String" user=".idea" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="git_searcher" type="cbb8eebc:String" user="git_searcher" />
-              <item name="src/main" type="cbb8eebc:String" user="src/main" />
-              <item name="java" type="cbb8eebc:String" user="java" />
+              <item name="src/main/java" type="cbb8eebc:String" user="src/main/java" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="git_searcher" type="cbb8eebc:String" user="git_searcher" />
-              <item name="src/main" type="cbb8eebc:String" user="src/main" />
-              <item name="java" type="cbb8eebc:String" user="java" />
-              <item name="com/gitsearcher/client" type="cbb8eebc:String" user="com/gitsearcher/client" />
+              <item name="src/main/java" type="cbb8eebc:String" user="src/main/java" />
+              <item name="com/gitsearcher" type="cbb8eebc:String" user="com/gitsearcher" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="git_searcher" type="cbb8eebc:String" user="git_searcher" />
-              <item name="src/main" type="cbb8eebc:String" user="src/main" />
-              <item name="java" type="cbb8eebc:String" user="java" />
-              <item name="com/gitsearcher/client" type="cbb8eebc:String" user="com/gitsearcher/client" />
-              <item name="api" type="cbb8eebc:String" user="api" />
+              <item name="src/main/java" type="cbb8eebc:String" user="src/main/java" />
+              <item name="com/gitsearcher" type="cbb8eebc:String" user="com/gitsearcher" />
+              <item name="rest/endpoint" type="cbb8eebc:String" user="rest/endpoint" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="git_searcher" type="cbb8eebc:String" user="git_searcher" />
-              <item name="src/main" type="cbb8eebc:String" user="src/main" />
-              <item name="java" type="cbb8eebc:String" user="java" />
-              <item name="com/gitsearcher/client" type="cbb8eebc:String" user="com/gitsearcher/client" />
-              <item name="api" type="cbb8eebc:String" user="api" />
-              <item name="impl" type="cbb8eebc:String" user="impl" />
+              <item name="src/main/java" type="cbb8eebc:String" user="src/main/java" />
+              <item name="com/gitsearcher" type="cbb8eebc:String" user="com/gitsearcher" />
+              <item name="rest/endpoint" type="cbb8eebc:String" user="rest/endpoint" />
+              <item name="Component" type="cbb8eebc:String" user="Component" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="git_searcher" type="cbb8eebc:String" user="git_searcher" />
-              <item name="src/main" type="cbb8eebc:String" user="src/main" />
-              <item name="java" type="cbb8eebc:String" user="java" />
-              <item name="com/gitsearcher/client" type="cbb8eebc:String" user="com/gitsearcher/client" />
-              <item name="config" type="cbb8eebc:String" user="config" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="git_searcher" type="cbb8eebc:String" user="git_searcher" />
-              <item name="src/main" type="cbb8eebc:String" user="src/main" />
-              <item name="java" type="cbb8eebc:String" user="java" />
-              <item name="com/gitsearcher/client" type="cbb8eebc:String" user="com/gitsearcher/client" />
-              <item name="endpoint" type="cbb8eebc:String" user="endpoint" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="git_searcher" type="cbb8eebc:String" user="git_searcher" />
-              <item name="src/main" type="cbb8eebc:String" user="src/main" />
-              <item name="java" type="cbb8eebc:String" user="java" />
-              <item name="com/gitsearcher/client" type="cbb8eebc:String" user="com/gitsearcher/client" />
-              <item name="endpoint" type="cbb8eebc:String" user="endpoint" />
+              <item name="src/main/java" type="cbb8eebc:String" user="src/main/java" />
+              <item name="com/gitsearcher" type="cbb8eebc:String" user="com/gitsearcher" />
+              <item name="rest/endpoint" type="cbb8eebc:String" user="rest/endpoint" />
               <item name="dto" type="cbb8eebc:String" user="dto" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="git_searcher" type="cbb8eebc:String" user="git_searcher" />
-              <item name="src/main" type="cbb8eebc:String" user="src/main" />
-              <item name="java" type="cbb8eebc:String" user="java" />
-              <item name="com/gitsearcher/client" type="cbb8eebc:String" user="com/gitsearcher/client" />
-              <item name="endpoint" type="cbb8eebc:String" user="endpoint" />
+              <item name="src/main/java" type="cbb8eebc:String" user="src/main/java" />
+              <item name="com/gitsearcher" type="cbb8eebc:String" user="com/gitsearcher" />
+              <item name="rest/endpoint" type="cbb8eebc:String" user="rest/endpoint" />
               <item name="impl" type="cbb8eebc:String" user="impl" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="git_searcher" type="cbb8eebc:String" user="git_searcher" />
-              <item name="src/main" type="cbb8eebc:String" user="src/main" />
-              <item name="resources" type="cbb8eebc:String" user="resources" />
+              <item name="src/main/java" type="cbb8eebc:String" user="src/main/java" />
+              <item name="com/gitsearcher" type="cbb8eebc:String" user="com/gitsearcher" />
+              <item name="service" type="cbb8eebc:String" user="service" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
+              <item name="git_searcher" type="cbb8eebc:String" user="git_searcher" />
+              <item name="src/main/java" type="cbb8eebc:String" user="src/main/java" />
+              <item name="com/gitsearcher" type="cbb8eebc:String" user="com/gitsearcher" />
+              <item name="service" type="cbb8eebc:String" user="service" />
+              <item name="impl" type="cbb8eebc:String" user="impl" />
             </path>
           </expand>
           <select />
@@ -813,7 +902,7 @@
       <updated>1533442191633</updated>
       <workItem from="1533442193299" duration="12447000" />
       <workItem from="1533457065178" duration="11706000" />
-      <workItem from="1533554871699" duration="25925000" />
+      <workItem from="1533554871699" duration="30392000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.&#10;Adds configurations for web client.">
       <created>1533444928580</created>
@@ -857,11 +946,18 @@
       <option name="project" value="LOCAL" />
       <updated>1533579391170</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Adds analytics logic.">
+      <created>1533615746498</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1533615746498</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50078000" />
+    <option name="totallyTimeSpent" value="54545000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="43" y="24" width="1877" height="1056" extended-state="6" />
@@ -878,7 +974,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41935483" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35376343" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -916,7 +1012,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41935483" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35376343" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -947,7 +1043,8 @@
     <MESSAGE value="Adds more client services." />
     <MESSAGE value="Adds entites." />
     <MESSAGE value="Defines what needs to be topic for TDD." />
-    <option name="LAST_COMMIT_MESSAGE" value="Defines what needs to be topic for TDD." />
+    <MESSAGE value="Adds analytics logic." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds analytics logic." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -988,30 +1085,10 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/gitsearcher/service/impl/GitServiceImpl.java</url>
-          <line>55</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/gitsearcher/service/impl/GitServiceImpl.java</url>
-          <line>36</line>
-          <properties />
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/gitsearcher/git/GitClient.java</url>
-          <line>67</line>
+          <line>70</line>
           <properties />
           <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/gitsearcher/git/GitClient.java</url>
-          <line>31</line>
-          <properties />
-          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/gitsearcher/service/impl/AnalyticsServiceImp.java</url>
@@ -1019,54 +1096,20 @@
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/gitsearcher/service/impl/GitServiceImpl.java</url>
+          <line>39</line>
+          <properties class="com.gitsearcher.service.impl.GitServiceImpl" method="searchRepository">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="25" />
+      <option name="time" value="28" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/client/SearchResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/RepositoryEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/mylyn/github/org.eclipse.egit.github.core/2.1.5/org.eclipse.egit.github.core-2.1.5-sources.jar!/org/eclipse/egit/github/core/CommitUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="42" column="42" lean-forward="true" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/mylyn/github/org.eclipse.egit.github.core/2.1.5/org.eclipse.egit.github.core-2.1.5.jar!/org/eclipse/egit/github/core/Commit.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#1971#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/mylyn/github/org.eclipse.egit.github.core/2.1.5/org.eclipse.egit.github.core-2.1.5.jar!/org/eclipse/egit/github/core/Repository.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/mylyn/github/org.eclipse.egit.github.core/2.1.5/org.eclipse.egit.github.core-2.1.5.jar!/org/eclipse/egit/github/core/RepositoryCommit.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1138,24 +1181,6 @@
         <state relative-caret-position="336">
           <caret line="33" column="35" lean-forward="false" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/client/InfoResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/git/GitClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="38" column="55" lean-forward="false" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1332,31 +1357,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/dto/RepositoryDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#293#294#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-            <element signature="e#361#362#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-            <element signature="e#433#434#0" expanded="true" />
-            <element signature="e#467#468#0" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#625#626#0" expanded="true" />
-            <element signature="e#665#666#0" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
-            <element signature="e#753#754#0" expanded="true" />
-            <element signature="e#791#792#0" expanded="true" />
-            <element signature="e#821#822#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/service/component/GitModelsConverter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -1413,24 +1413,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/service/component/GitModelConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="78" column="28" lean-forward="false" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/service/GitService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/entity/Contributor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
@@ -1446,16 +1428,6 @@
         <state relative-caret-position="273">
           <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/service/impl/GitServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="906">
-          <caret line="68" column="29" lean-forward="false" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1530,16 +1502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/Component/DtoConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/service/impl/AnalyticsServiceImp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1550,13 +1512,138 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/impl/RepositoryEndpointImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/service/component/GitModelConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="612">
+          <caret line="83" column="5" lean-forward="false" selection-start-line="81" selection-start-column="4" selection-end-line="83" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/client/SearchResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/client/InfoResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/InfoEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/dto/RepositoryIdDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/exception/ApiRateLimitExceededException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/git/GitClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-384">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/Component/DtoConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="42" column="39" lean-forward="false" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/dto/RepositoryDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-585">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#444#445#0" expanded="true" />
+            <element signature="e#496#497#0" expanded="true" />
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
+            <element signature="e#622#623#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#699#700#0" expanded="true" />
+            <element signature="e#726#727#0" expanded="true" />
+            <element signature="e#766#767#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#836#837#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+            <element signature="e#924#925#0" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#1000#1001#0" expanded="true" />
+            <element signature="e#1026#1027#0" expanded="true" />
+            <element signature="e#1064#1065#0" expanded="true" />
+            <element signature="e#1094#1095#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/impl/RepositoryEndpointImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/rest/endpoint/RepositoryEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/service/impl/GitServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-258">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gitsearcher/service/GitService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -12,7 +12,7 @@ import java.util.List;
  */
 public interface GitService {
 
-    List<SearchRepository> searchRepositories(String query);
+    List<SearchRepository> searchRepositories(String query, int page);
 
     SearchResult searchRepository(String repositoryGeneratedId);
 }

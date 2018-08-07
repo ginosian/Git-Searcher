@@ -32,7 +32,7 @@ public class GitServiceImpl implements GitService {
     private GitModelConverter converter;
 
     @Override
-    public List<SearchRepository> searchRepositories(String query) {
+    public List<SearchRepository> searchRepositories(String query, int page) {
         final List<SearchRepository> repositories = gitClient.searchRepositories(query);
         return repositories;
     }

@@ -3,9 +3,9 @@ package com.gitsearcher.rest.endpoint.impl;
 import com.gitsearcher.rest.endpoint.Component.DtoConverter;
 import com.gitsearcher.rest.endpoint.RepositoryEndpoint;
 import com.gitsearcher.rest.endpoint.dto.RepositoryAnalyticsDto;
+import com.gitsearcher.rest.endpoint.dto.RepositoryDto;
 import com.gitsearcher.service.AnalyticsService;
 import com.gitsearcher.service.GitService;
-import org.eclipse.egit.github.core.SearchRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -27,8 +27,8 @@ public class RepositoryEndpointImpl implements RepositoryEndpoint {
     private DtoConverter converter;
 
     @Override
-    public List<SearchRepository> search(final String query, final Integer page) {
-        return gitService.searchRepositories(query);
+    public List<RepositoryDto> search(final String query, final Integer page) {
+        return converter.convert(gitService.searchRepositories(query, page));
     }
 
     @Override

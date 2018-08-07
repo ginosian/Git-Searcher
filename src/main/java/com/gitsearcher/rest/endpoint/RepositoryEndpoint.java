@@ -1,6 +1,7 @@
 package com.gitsearcher.rest.endpoint;
 
 import com.gitsearcher.rest.endpoint.dto.RepositoryAnalyticsDto;
+import com.gitsearcher.rest.endpoint.dto.RepositoryDto;
 import io.swagger.annotations.*;
 import org.eclipse.egit.github.core.SearchRepository;
 
@@ -28,7 +29,7 @@ public interface RepositoryEndpoint {
     )
     @GET
     @Path("/search")
-    List<SearchRepository> search(
+    List<RepositoryDto> search(
             @QueryParam("query") final String query,
             @DefaultValue("0") @QueryParam("page") final Integer page
     );

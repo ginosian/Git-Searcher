@@ -7,17 +7,18 @@ package com.gitsearcher.rest.endpoint.dto;
  */
 public class RepositoryDto {
 
-    private Long gitId;
+    private String gitGeneratedId;
     private String description;
     private String name;
+    private String creatorName;
     private String url;
 
-    public Long getGitId() {
-        return gitId;
+    public String getGitGeneratedId() {
+        return gitGeneratedId;
     }
 
-    public void setGitId(Long gitId) {
-        this.gitId = gitId;
+    public void setGitGeneratedId(String gitGeneratedId) {
+        this.gitGeneratedId = gitGeneratedId;
     }
 
     public String getDescription() {
@@ -34,6 +35,14 @@ public class RepositoryDto {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getCreatorName() {
+        return creatorName;
+    }
+
+    public void setCreatorName(String creatorName) {
+        this.creatorName = creatorName;
     }
 
     public String getUrl() {
