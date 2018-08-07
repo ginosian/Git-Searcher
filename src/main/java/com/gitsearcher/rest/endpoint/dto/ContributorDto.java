@@ -1,53 +1,42 @@
-package com.gitsearcher.entity;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+package com.gitsearcher.rest.endpoint.dto;
 
 /**
  * @author Marta Ginosyan<br/>
  * Date: gitsearcher<br/>
- * Date: 8/6/18<br/>
+ * Date: 8/7/18<br/>
  */
+public class ContributorDto {
 
-
-@Entity
-@Table(name = "repository_commit")
-public class RepositoryCommit extends AbstractEntity{
-
-    @OneToOne
-    private Contributor contributor;
-
-    @Column(name = "sha")
-    private String sha;
-
-    @Column(name = "url")
+    private Integer gitId;
+    private String email;
+    private String name;
     private String url;
-
-    @Column(name = "additions")
     private Integer additions;
-
-    @Column(name = "deletions")
     private Integer deletions;
-
-    @Column(name = "total")
     private Integer total;
 
-    public Contributor getContributor() {
-        return contributor;
+    public Integer getGitId() {
+        return gitId;
     }
 
-    public void setContributor(Contributor contributor) {
-        this.contributor = contributor;
+    public void setGitId(Integer gitId) {
+        this.gitId = gitId;
     }
 
-    public String getSha() {
-        return sha;
+    public String getEmail() {
+        return email;
     }
 
-    public void setSha(String sha) {
-        this.sha = sha;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getUrl() {

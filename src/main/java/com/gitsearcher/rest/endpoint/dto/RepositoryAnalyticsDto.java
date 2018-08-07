@@ -1,11 +1,14 @@
 package com.gitsearcher.rest.endpoint.dto;
 
-import org.eclipse.egit.github.core.Contributor;
-import org.eclipse.egit.github.core.Repository;
-import org.eclipse.egit.github.core.RepositoryCommit;
-import org.eclipse.egit.github.core.User;
+
+import com.gitsearcher.entity.Contributor;
+import com.gitsearcher.entity.ContributorStat;
+import com.gitsearcher.entity.Repository;
+import com.gitsearcher.entity.RepositoryCommit;
+import com.gitsearcher.misc.ContributionHonor;
 
 import java.time.LocalDateTime;
+import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 
@@ -18,8 +21,12 @@ public class RepositoryAnalyticsDto {
 
     private Repository repository;
     private List<Contributor> contributors;
-    private Map<User, List<RepositoryCommit>> commits;
-    private LocalDateTime created;
+    private List<RepositoryCommit> commits;
+    private Integer totalCommits;
+    private Map<ContributionHonor, ContributorStat> stats = new EnumMap<>(ContributionHonor.class);
+    private LocalDateTime earliestCommit;
+    private LocalDateTime latestCommit;
+    private LocalDateTime searchDate;
 
     public Repository getRepository() {
         return repository;
@@ -37,19 +44,51 @@ public class RepositoryAnalyticsDto {
         this.contributors = contributors;
     }
 
-    public Map<User, List<RepositoryCommit>> getCommits() {
+    public List<RepositoryCommit> getCommits() {
         return commits;
     }
 
-    public void setCommits(Map<User, List<RepositoryCommit>> commits) {
+    public void setCommits(List<RepositoryCommit> commits) {
         this.commits = commits;
     }
 
-    public LocalDateTime getCreated() {
-        return created;
+    public Integer getTotalCommits() {
+        return totalCommits;
     }
 
-    public void setCreated(LocalDateTime created) {
-        this.created = created;
+    public void setTotalCommits(Integer totalCommits) {
+        this.totalCommits = totalCommits;
+    }
+
+    public Map<ContributionHonor, ContributorStat> getStats() {
+        return stats;
+    }
+
+    public void setStats(Map<ContributionHonor, ContributorStat> stats) {
+        this.stats = stats;
+    }
+
+    public LocalDateTime getEarliestCommit() {
+        return earliestCommit;
+    }
+
+    public void setEarliestCommit(LocalDateTime earliestCommit) {
+        this.earliestCommit = earliestCommit;
+    }
+
+    public LocalDateTime getLatestCommit() {
+        return latestCommit;
+    }
+
+    public void setLatestCommit(LocalDateTime latestCommit) {
+        this.latestCommit = latestCommit;
+    }
+
+    public LocalDateTime getSearchDate() {
+        return searchDate;
+    }
+
+    public void setSearchDate(LocalDateTime searchDate) {
+        this.searchDate = searchDate;
     }
 }

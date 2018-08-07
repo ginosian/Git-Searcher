@@ -1,38 +1,30 @@
-package com.gitsearcher.entity;
+package com.gitsearcher.rest.endpoint.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import com.gitsearcher.entity.Contributor;
 
 /**
  * @author Marta Ginosyan<br/>
  * Date: gitsearcher<br/>
- * Date: 8/6/18<br/>
+ * Date: 8/7/18<br/>
  */
+public class RepositoryCommitDto {
 
-
-@Entity
-@Table(name = "repository_commit")
-public class RepositoryCommit extends AbstractEntity{
-
-    @OneToOne
+    private Integer contributions;
     private Contributor contributor;
-
-    @Column(name = "sha")
-    private String sha;
-
-    @Column(name = "url")
+    private Integer gitId;
+    private String name;
     private String url;
-
-    @Column(name = "additions")
     private Integer additions;
-
-    @Column(name = "deletions")
     private Integer deletions;
-
-    @Column(name = "total")
     private Integer total;
+
+    public Integer getContributions() {
+        return contributions;
+    }
+
+    public void setContributions(Integer contributions) {
+        this.contributions = contributions;
+    }
 
     public Contributor getContributor() {
         return contributor;
@@ -42,12 +34,20 @@ public class RepositoryCommit extends AbstractEntity{
         this.contributor = contributor;
     }
 
-    public String getSha() {
-        return sha;
+    public Integer getGitId() {
+        return gitId;
     }
 
-    public void setSha(String sha) {
-        this.sha = sha;
+    public void setGitId(Integer gitId) {
+        this.gitId = gitId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getUrl() {

@@ -1,16 +1,17 @@
 package com.gitsearcher.service.impl;
 
+import com.gitsearcher.entity.SearchResult;
 import com.gitsearcher.git.GitClient;
-import com.gitsearcher.rest.endpoint.dto.RepositoryAnalyticsDto;
 import com.gitsearcher.service.GitService;
-import com.google.common.collect.Lists;
-import org.eclipse.egit.github.core.*;
+import com.gitsearcher.service.component.GitModelConverter;
+import org.eclipse.egit.github.core.Contributor;
+import org.eclipse.egit.github.core.Repository;
+import org.eclipse.egit.github.core.RepositoryCommit;
+import org.eclipse.egit.github.core.SearchRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
@@ -22,10 +23,13 @@ import java.util.stream.Collectors;
  */
 
 @Service
-public class GitServiceImpl implements GitService{
+public class GitServiceImpl implements GitService {
 
     @Autowired
     private GitClient gitClient;
+
+    @Autowired
+    private GitModelConverter converter;
 
     @Override
     public List<SearchRepository> searchRepositories(String query) {
@@ -34,31 +38,31 @@ public class GitServiceImpl implements GitService{
     }
 
     @Override
-    public RepositoryAnalyticsDto analytics(String repositoryGeneratedId) {
+    public SearchResult searchRepository(String repositoryGeneratedId) {
         final Repository repository = gitClient.getRepository(repositoryGeneratedId);
         final List<Contributor> contributors = gitClient.getContributors(repositoryGeneratedId);
-        final Map<User, List<RepositoryCommit>> commits = recalculateData(searchRepositoryCommits(repositoryGeneratedId));
-        final RepositoryAnalyticsDto repositoryAnalyticsDto = new RepositoryAnalyticsDto();
-        repositoryAnalyticsDto.setRepository(repository);
-        repositoryAnalyticsDto.setContributors(contributors);
-        repositoryAnalyticsDto.setCommits(commits);
-        return repositoryAnalyticsDto;
+        final List<RepositoryCommit> repositoryCommits = searchRepositoryCommits(repositoryGeneratedId);
+        final SearchResult searchResult = new SearchResult();
+        searchResult.setRepository(converter.convert(repository));
+        searchResult.setContributors(converter.convertContributorList(contributors));
+        searchResult.setCommits(converter.convertCommitList(repositoryCommits));
+        return searchResult;
     }
 
-    private List<RepositoryCommit> searchRepositoryCommits(final String repositoryGeneratedId){
+    private List<RepositoryCommit> searchRepositoryCommits(final String repositoryGeneratedId) {
         final List<RepositoryCommit> repositoryCommits = gitClient.getRepositoryCommits(repositoryGeneratedId);
-       return repositoryCommits
+        return repositoryCommits
                 .stream()
                 .map(commit -> CompletableFuture.supplyAsync(() -> getCommitWithAnalytics(repositoryGeneratedId, commit.getSha())))
                 .map(this::getRepositoryCommit)
                 .collect(Collectors.toList());
     }
 
-    private RepositoryCommit getCommitWithAnalytics(final String repositoryGeneratedId, final String sha){
-       return gitClient.getRepositoryCommit(repositoryGeneratedId, sha);
+    private RepositoryCommit getCommitWithAnalytics(final String repositoryGeneratedId, final String sha) {
+        return gitClient.getRepositoryCommit(repositoryGeneratedId, sha);
     }
 
-    private RepositoryCommit getRepositoryCommit( CompletableFuture<RepositoryCommit> repositoryCommitCompletableFuture){
+    private RepositoryCommit getRepositoryCommit(CompletableFuture<RepositoryCommit> repositoryCommitCompletableFuture) {
         try {
             return repositoryCommitCompletableFuture.get();
         } catch (InterruptedException e) {
@@ -67,20 +71,5 @@ public class GitServiceImpl implements GitService{
             e.printStackTrace();
         }
         return null;
-    }
-
-    private Map<User, List<RepositoryCommit>> recalculateData(List<RepositoryCommit> repositoryCommits){
-        final Map<User, List<RepositoryCommit>> userCommitsMap= new HashMap<>();
-        repositoryCommits.forEach(repositoryCommit -> {
-            final User commiter = repositoryCommit.getCommitter();
-            final List<RepositoryCommit> value = userCommitsMap.get(commiter);
-            if(value == null){
-                userCommitsMap.put(commiter, Lists.newArrayList(repositoryCommit));
-            } else {
-                value.add(repositoryCommit);
-            }
-        });
-
-        return userCommitsMap;
     }
 }

@@ -6,7 +6,7 @@ package com.gitsearcher.misc;
  * Date: 8/6/18<br/>
  */
 public enum ContributionHonor {
+    MAGE,
     GAME_CHANGER,
-    NEW_FEATURES_ORACLE,
-    MAGE
+    NEW_FEATURES_ORACLE
 }

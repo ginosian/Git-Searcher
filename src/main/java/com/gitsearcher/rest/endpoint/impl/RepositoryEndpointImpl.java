@@ -1,7 +1,9 @@
 package com.gitsearcher.rest.endpoint.impl;
 
+import com.gitsearcher.rest.endpoint.Component.DtoConverter;
 import com.gitsearcher.rest.endpoint.RepositoryEndpoint;
 import com.gitsearcher.rest.endpoint.dto.RepositoryAnalyticsDto;
+import com.gitsearcher.service.AnalyticsService;
 import com.gitsearcher.service.GitService;
 import org.eclipse.egit.github.core.SearchRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +17,14 @@ import java.util.List;
  */
 public class RepositoryEndpointImpl implements RepositoryEndpoint {
 
-    //TODO testing yet, replace with service later
     @Autowired
     private GitService gitService;
+
+    @Autowired
+    private AnalyticsService analyticsService;
+
+    @Autowired
+    private DtoConverter converter;
 
     @Override
     public List<SearchRepository> search(final String query, final Integer page) {
@@ -26,6 +33,6 @@ public class RepositoryEndpointImpl implements RepositoryEndpoint {
 
     @Override
     public RepositoryAnalyticsDto analytics(final String repositoryGeneratedId) {
-        return gitService.analytics(repositoryGeneratedId);
+        return converter.convert(analyticsService.calculateStats(gitService.searchRepository(repositoryGeneratedId)));
     }
 }

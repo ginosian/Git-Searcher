@@ -1,34 +1,31 @@
-package com.gitsearcher.entity;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+package com.gitsearcher.rest.endpoint.dto;
 
 /**
  * @author Marta Ginosyan<br/>
  * Date: gitsearcher<br/>
- * Date: 8/6/18<br/>
+ * Date: 8/7/18<br/>
  */
+public class RepositoryDto {
 
-@Entity
-@Table(name = "contributor")
-public class Contributor extends AbstractEntity{
-
-    @Column(name = "git_id")
-    private Integer gitId;
-
-    @Column(name = "name")
+    private Long gitId;
+    private String description;
     private String name;
-
-    @Column(name = "url")
     private String url;
 
-    public Integer getGitId() {
+    public Long getGitId() {
         return gitId;
     }
 
-    public void setGitId(Integer gitId) {
+    public void setGitId(Long gitId) {
         this.gitId = gitId;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getName() {

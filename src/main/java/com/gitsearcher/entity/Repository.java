@@ -16,7 +16,10 @@ import javax.persistence.Table;
 public class Repository extends AbstractEntity{
 
     @Column(name = "git_id")
-    private Long gitId;
+    private String gitId;
+
+    @Column(name = "generated_git_id")
+    private String generatedGitId;
 
     @Column(name = "description")
     private String description;
@@ -27,12 +30,20 @@ public class Repository extends AbstractEntity{
     @Column(name = "url")
     private String url;
 
-    public Long getGitId() {
+    public String getGitId() {
         return gitId;
     }
 
-    public void setGitId(Long gitId) {
+    public void setGitId(String gitId) {
         this.gitId = gitId;
+    }
+
+    public String getGeneratedGitId() {
+        return generatedGitId;
+    }
+
+    public void setGeneratedGitId(String generatedGitId) {
+        this.generatedGitId = generatedGitId;
     }
 
     public String getDescription() {

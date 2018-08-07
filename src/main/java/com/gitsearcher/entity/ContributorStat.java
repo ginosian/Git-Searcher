@@ -1,9 +1,6 @@
 package com.gitsearcher.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * @author Marta Ginosyan<br/>
@@ -17,7 +14,12 @@ import javax.persistence.Table;
 public class ContributorStat extends AbstractEntity{
 
     @OneToOne
+    @MapsId
     private Contributor contributor;
+
+    @OneToOne
+    @MapsId
+    private SearchResult searchResult;
 
     @Column(name = "additions")
     private Integer additions;
@@ -34,6 +36,14 @@ public class ContributorStat extends AbstractEntity{
 
     public void setContributor(Contributor contributor) {
         this.contributor = contributor;
+    }
+
+    public SearchResult getSearchResult() {
+        return searchResult;
+    }
+
+    public void setSearchResult(SearchResult searchResult) {
+        this.searchResult = searchResult;
     }
 
     public Integer getAdditions() {
@@ -59,4 +69,20 @@ public class ContributorStat extends AbstractEntity{
     public void setTotal(Integer total) {
         this.total = total;
     }
+
+    @Transient
+    public void addAddition(int addition){
+        this.additions += addition;
+    }
+
+    @Transient
+    public void addDelition(int delition){
+        this.deletions += delition;
+    }
+
+    @Transient
+    public void addTotal(int total){
+        this.total += total;
+    }
+
 }
